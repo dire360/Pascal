@@ -33,17 +33,17 @@ public class Pascal_Recursion {
         
         // Print Header with # of rows
         System.out.println("");
-        System.out.printf("Pascal Triangle with %2d rows%n", rows);
+        System.out.printf("Pascal's triangle with %2d rows%n", rows);
 
         for (int n = 0; n < rows; n++) {  // outer loop for rows
             for (int j = 0; j < rows - n; j++) { // lower row # (n) = more spaces needed to create triangle
                 System.out.print("  "); // Print two spaces each (before printing values)
             }
             
-            for (int k = 0; k <= n; k++) { // Print values in the row
+            for (int k = 0; k <= n; k++) { // inner loop for each position in row (normaly colums)
                 System.out.printf("%5d", Pascal_Recursion.nck(n, k)); 
+                // calls nck(n,k) and prints output for each position
                 // %5d forces a minimum width of 5 characters for each number
-                // 2 spaces in front of number   
             }
             System.out.println(); // Move to the next line after each row
         } 
